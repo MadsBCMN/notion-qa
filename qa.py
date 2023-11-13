@@ -16,7 +16,7 @@ with open("faiss_store.pkl", "rb") as f:
     store = pickle.load(f)
 
 store.index = index
-chain = RetrievalQAWithSourcesChain.from_chain_type(llm=ChatOpenAI(temperature=0,openai_api_key = "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"), retriever=store.as_retriever())
+chain = RetrievalQAWithSourcesChain.from_chain_type(llm=ChatOpenAI(temperature=0,openai_api_key = "l"), retriever=store.as_retriever())
 result = chain({"question": args.question})
 print(f"Answer: {result['answer']}")
 print(f"Sources: {result['sources']}")

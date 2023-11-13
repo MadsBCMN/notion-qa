@@ -6,7 +6,7 @@ from langchain.vectorstores import FAISS
 from langchain.embeddings import OpenAIEmbeddings
 import openai
 import pickle
-openai = OpenAIEmbeddings(openai_api_key="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")
+openai = OpenAIEmbeddings(openai_api_key="l")
 
 # Here we load in the data in the format that Notion exports it in.
 ps = list(Path("Notion_DB/").glob("**/*.md"))
